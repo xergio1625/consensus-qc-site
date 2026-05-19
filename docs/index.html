@@ -1,0 +1,1121 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Consensus QC – Plataforma integral de gestión de calidad para laboratorios clínicos. Plan de calidad estructurado, control interno Westgard, Six Sigma, inventario de reactivos, gestión de roles multisucursal y trazabilidad de equipamiento.">
+  <meta property="og:title" content="Consensus QC | Plataforma Integral de Calidad para Laboratorio Clínico">
+  <meta property="og:description" content="Del plan estratégico al análisis de causa raíz: Consensus QC conecta control QC, inventario, roles y equipamiento para que su laboratorio detecte por qué fallan las corridas.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#6D0F2B">
+  <link rel="preconnect" href="https://github.com" crossorigin>
+  <link rel="preconnect" href="https://formspree.io" crossorigin>
+  <link rel="preconnect" href="https://js.hsforms.net" crossorigin>
+  <link rel="preconnect" href="https://js.hs-scripts.com" crossorigin>
+  <style>
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { margin: 0; font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif; background: #F5F1F3; color: #2D2D2D; line-height: 1.65; }
+    .navbar { position: sticky; top: 0; z-index: 200; background: #4B0B1E; box-shadow: 0 2px 12px rgba(0,0,0,.3); }
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; min-height: 62px; gap: 16px; }
+    .hero { background: linear-gradient(145deg, #4B0B1E 0%, #3E0818 60%, #2A0510 100%); color: #fff; padding: 72px 0 0; overflow: hidden; }
+    .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .brand-name { font-size: 18px; font-weight: 700; color: #fff; }
+    .hero h1 { font-size: clamp(26px, 3.8vw, 46px); line-height: 1.18; margin: 0 0 18px; font-weight: 800; }
+    .hero-subtitle { max-width: 480px; font-size: 16px; color: #D9C8CE; }
+    .btn-primary, .btn-secondary { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; }
+    .hero-visual { min-height: 420px; }
+    .section { min-height: 1px; }
+  </style>
+  <title>Consensus QC | Plataforma Integral de Calidad para Laboratorio Clínico</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════════════════════ -->
+  <header class="navbar" id="top">
+    <div class="container nav-inner">
+      <a href="#top" class="brand" aria-label="Consensus QC inicio">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-name">Consensus QC</span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <a href="#plan-calidad">Plan de Calidad</a>
+        <a href="#ecosistema">Ecosistema</a>
+        <a href="#seguridad-paciente">Seguridad del Paciente</a>
+        <a href="#reportes-inteligentes">Reportes</a>
+        <a href="#modulos">Módulos</a>
+        <a href="#precios">Planes</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacto">Contacto</a>
+        <a href="https://github.com/descarga/consensus-qc/releases/latest/download/ConsensusQC_Prueba_Setup.exe"
+           class="btn-nav"
+           aria-label="Descargar versión de prueba de Consensus QC">
+          ⬇ Descargar prueba
+        </a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+      <a href="#plan-calidad">Plan de Calidad</a>
+      <a href="#ecosistema">Ecosistema</a>
+      <a href="#seguridad-paciente">Seguridad del Paciente</a>
+      <a href="#reportes-inteligentes">Reportes</a>
+      <a href="#modulos">Módulos</a>
+      <a href="#precios">Planes</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contacto">Contacto</a>
+      <a href="https://github.com/descarga/consensus-qc/releases/latest/download/ConsensusQC_Prueba_Setup.exe"
+         class="btn-nav-mobile">⬇ Descargar versión de prueba</a>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════════════════ -->
+  <section class="hero" aria-label="Presentación del software">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <div class="badge-version">Premium 3.0 · MVP</div>
+        <h1>
+          El plan de calidad<br>
+          <span class="accent">en el centro de su laboratorio</span>
+        </h1>
+        <p class="hero-subtitle">
+          Consensus QC integra el plan de calidad con el control QC diario,
+          el inventario de reactivos, la gestión de roles multisucursal
+          y la trazabilidad de equipamiento — todo conectado para detectar
+          la causa raíz de cada desviación.
+        </p>
+        <div class="hero-actions">
+          <a href="https://github.com/descarga/consensus-qc/releases/latest/download/ConsensusQC_Prueba_Setup.exe"
+             class="btn-primary btn-download"
+             id="btn-hero-download">
+            ⬇ Descargar versión de prueba
+          </a>
+          <a href="#contacto" class="btn-secondary">Solicitar licencia</a>
+        </div>
+        <p class="hero-disclaimer">
+          Solo Windows 10 / 11 · Prueba 14 días sin restricciones · Sin tarjeta requerida
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num" data-count="9" data-suffix="+">9+</span>
+            <span class="stat-label">Módulos activos</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat-num" data-count="4.3" data-decimals="1" data-suffix="σ">4.3σ</span>
+            <span class="stat-label">Sigma promedio</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat-num" data-count="100" data-suffix="%">100%</span>
+            <span class="stat-label">Trazabilidad</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-window">
+          <div class="window-titlebar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="window-title">Consensus QC — Plan de Calidad</span>
+          </div>
+          <div class="window-sidebar">
+            <div class="ws-logo">Consensus QC</div>
+            <div class="ws-item active">Plan de Calidad</div>
+            <div class="ws-item">Dashboard KPI</div>
+            <div class="ws-item">Visualizador QC</div>
+            <div class="ws-item">Desempeño σ</div>
+            <div class="ws-item">Reportes</div>
+          </div>
+          <div class="window-content">
+            <div class="wc-header">Plan de Calidad · Ciclo activo</div>
+            <div class="wc-kpis">
+              <div class="kpi green">
+                <span class="kpi-val">7/9</span>
+                <span class="kpi-label">Objetivos en curso</span>
+              </div>
+              <div class="kpi yellow">
+                <span class="kpi-val">2</span>
+                <span class="kpi-label">Acciones pendientes</span>
+              </div>
+              <div class="kpi blue">
+                <span class="kpi-val">4.3σ</span>
+                <span class="kpi-label">Sigma promedio</span>
+              </div>
+            </div>
+            <div class="wc-chart" aria-label="Gráfico Levey-Jennings simulado">
+              <svg viewBox="0 0 220 80" aria-hidden="true">
+                <line x1="0" y1="40" x2="220" y2="40" stroke="#D9CAD1" stroke-width="1"/>
+                <line x1="0" y1="20" x2="220" y2="20" stroke="#E8D5DB" stroke-width="0.8" stroke-dasharray="4,3"/>
+                <line x1="0" y1="60" x2="220" y2="60" stroke="#E8D5DB" stroke-width="0.8" stroke-dasharray="4,3"/>
+                <polyline points="10,38 30,36 50,42 70,35 90,38 110,44 130,37 150,39 170,36 190,41 210,38"
+                          fill="none" stroke="#6D0F2B" stroke-width="2"/>
+                <circle cx="110" cy="44" r="4" fill="#B26A00"/>
+                <circle cx="10"  cy="38" r="2.5" fill="#6D0F2B"/>
+                <circle cx="30"  cy="36" r="2.5" fill="#6D0F2B"/>
+                <circle cx="50"  cy="42" r="2.5" fill="#6D0F2B"/>
+                <circle cx="70"  cy="35" r="2.5" fill="#6D0F2B"/>
+                <circle cx="90"  cy="38" r="2.5" fill="#6D0F2B"/>
+                <circle cx="130" cy="37" r="2.5" fill="#6D0F2B"/>
+                <circle cx="150" cy="39" r="2.5" fill="#6D0F2B"/>
+                <circle cx="170" cy="36" r="2.5" fill="#6D0F2B"/>
+                <circle cx="190" cy="41" r="2.5" fill="#6D0F2B"/>
+                <circle cx="210" cy="38" r="2.5" fill="#6D0F2B"/>
+              </svg>
+              <p class="chart-label">Levey-Jennings — Glucosa L1 (Últimas 11 corridas)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 56" preserveAspectRatio="none">
+        <path d="M0,56 C360,0 1080,56 1440,28 L1440,56 Z" fill="#F5F1F3"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       PLAN DE CALIDAD — SECCIÓN CENTRAL
+  ════════════════════════════════════════════════════════ -->
+  <section class="section section-plan" id="plan-calidad">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-section">Módulo central</div>
+        <h2>El plan de calidad como eje de todo</h2>
+        <p>
+          Un plan de calidad sin ejecución controlada es solo un documento.
+          Un encargado de calidad empoderado y con control real convierte los datos en decisiones oportunas.
+          Consensus QC convierte su plan en un ciclo vivo: cada objetivo tiene
+          métricas, cada desviación tiene una acción, y cada acción tiene un responsable.
+        </p>
+      </div>
+
+      <div class="plan-flow" aria-label="Ciclo del plan de calidad">
+        <div class="pf-step">
+          <div class="pf-icon" aria-hidden="true">🎯</div>
+          <h3>1. Planificación estratégica</h3>
+          <p>Defina objetivos de calidad por analito y área. Configure estrategias Westgard, umbrales Sigma y criterios de aceptabilidad según normas CLIA, BV o RCPA.</p>
+        </div>
+        <div class="pf-arrow" aria-hidden="true">→</div>
+        <div class="pf-step">
+          <div class="pf-icon" aria-hidden="true">📊</div>
+          <h3>2. Ejecución y monitoreo</h3>
+          <p>Registro diario de controles, alertas automáticas Westgard en tiempo real, gráficas Levey-Jennings y validación de corridas con trazabilidad del operador.</p>
+        </div>
+        <div class="pf-arrow" aria-hidden="true">→</div>
+        <div class="pf-step">
+          <div class="pf-icon" aria-hidden="true">🔍</div>
+          <h3>3. Análisis de desviaciones</h3>
+          <p>Correlacione alertas con lotes de reactivos, mantenimiento de equipos, cambio de analista y resultados de EQA. Identifique patrones antes de que se conviertan en errores clínicos.</p>
+        </div>
+        <div class="pf-arrow" aria-hidden="true">→</div>
+        <div class="pf-step">
+          <div class="pf-icon" aria-hidden="true">✅</div>
+          <h3>4. Acciones y mejora continua</h3>
+          <p>Registre acciones correctivas y protectoras con responsable, fecha límite y estado. El encargado de calidad mantiene visibilidad total del plan y cierra el ciclo de mejora continua dentro del mismo sistema.</p>
+        </div>
+      </div>
+
+      <div class="plan-highlight-grid">
+        <div class="ph-item">
+          <span class="ph-icon" aria-hidden="true">🌳</span>
+          <div>
+            <strong>Árboles de decisión QC</strong>
+            <span>Defina qué regla Westgard aplica ante cada tipo de desviación y qué acción procede automáticamente.</span>
+          </div>
+        </div>
+        <div class="ph-item">
+          <span class="ph-icon" aria-hidden="true">📋</span>
+          <div>
+            <strong>Versiones del plan</strong>
+            <span>Historial completo con control de cambios y trazabilidad de quién aprobó cada revisión del plan.</span>
+          </div>
+        </div>
+        <div class="ph-item">
+          <span class="ph-icon" aria-hidden="true">🔔</span>
+          <div>
+            <strong>Alertas tempranas</strong>
+            <span>Notificaciones de lotes próximos a vencer, analistas sin registros recientes y objetivos del plan con cumplimiento bajo.</span>
+          </div>
+        </div>
+        <div class="ph-item">
+          <span class="ph-icon" aria-hidden="true">📄</span>
+          <div>
+            <strong>Reportes con firma</strong>
+            <span>Genere reportes PDF del cumplimiento del plan de calidad con firma digital del responsable técnico.</span>
+          </div>
+        </div>
+        <div class="ph-item">
+          <span class="ph-icon" aria-hidden="true">🧪</span>
+          <div>
+            <strong>N20 robusto y reproducible</strong>
+            <span>Más que un test de Dixon: combina múltiples pruebas de control para asegurar reproducibilidad confiable y minimizar reajustes innecesarios.</span>
+          </div>
+        </div>
+        <div class="ph-item">
+          <span class="ph-icon" aria-hidden="true">🛠️</span>
+          <div>
+            <strong>Acciones correctivas integradas</strong>
+            <span>Módulo funcional conectado con el plan, las gráficas Levey-Jennings y los análisis posteriores para cerrar desvíos con evidencia trazable.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="plan-progress-grid" aria-label="Métricas de avance del plan de calidad">
+        <div class="progress-card">
+          <div class="progress-card-top">
+            <strong>Cumplimiento del plan</strong>
+            <span>87%</span>
+          </div>
+          <div class="progress-bar"><span style="width:87%"></span></div>
+        </div>
+        <div class="progress-card">
+          <div class="progress-card-top">
+            <strong>Acciones correctivas cerradas</strong>
+            <span>72%</span>
+          </div>
+          <div class="progress-bar"><span style="width:72%"></span></div>
+        </div>
+        <div class="progress-card">
+          <div class="progress-card-top">
+            <strong>Resultados con trazabilidad completa</strong>
+            <span>96%</span>
+          </div>
+          <div class="progress-bar"><span style="width:96%"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       ECOSISTEMA INTEGRADO
+  ════════════════════════════════════════════════════════ -->
+  <section class="section section-alt" id="ecosistema">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-section badge-soon">Plataforma en expansión</div>
+        <h2>Un ecosistema que detecta la causa raíz de cada falla</h2>
+        <p>
+          ¿Por qué falló la corrida de glucosa hoy? Consensus QC cruza los datos de QC
+          con el historial de inventario, el estado de los equipos y los roles del analista
+          — para que la respuesta sea evidente, no una suposición.
+        </p>
+      </div>
+
+      <div class="eco-grid">
+        <div class="eco-card eco-active">
+          <div class="eco-card-top">
+            <span class="eco-icon" aria-hidden="true">📊</span>
+            <span class="eco-status-badge active">Disponible ahora</span>
+          </div>
+          <h3>Control de Calidad</h3>
+          <p>Levey-Jennings avanzado, reglas Westgard, Six Sigma, CUSUM, N20 robusto y control externo EQA en un ciclo completo de mejora continua.</p>
+          <ul class="eco-features">
+            <li>Control interno multi-analito y multi-nivel</li>
+            <li>N20 con múltiples pruebas para reproducibilidad confiable</li>
+            <li>Dashboard de KPIs en tiempo real</li>
+            <li>Levey-Jennings con análisis extendido y trazabilidad de eventos</li>
+          </ul>
+        </div>
+        <div class="eco-card eco-soon">
+          <div class="eco-card-top">
+            <span class="eco-icon" aria-hidden="true">🧪</span>
+            <span class="eco-status-badge soon">Próximamente</span>
+          </div>
+          <h3>Inventario de Reactivos</h3>
+          <p>Trazabilidad completa de lotes, fechas de vencimiento y consumo. Cuando un control falla, el sistema identifica si coincide con un cambio de lote.</p>
+          <ul class="eco-features">
+            <li>Alertas de stock mínimo y vencimiento</li>
+            <li>Correlación lote ↔ desviación QC</li>
+            <li>Registro de apertura y cierre de reactivos</li>
+          </ul>
+        </div>
+        <div class="eco-card eco-soon">
+          <div class="eco-card-top">
+            <span class="eco-icon" aria-hidden="true">👥</span>
+            <span class="eco-status-badge soon">Próximamente</span>
+          </div>
+          <h3>Gestión de Roles</h3>
+          <p>Control de acceso granular por sucursal, asignación de responsabilidades y trazabilidad completa: quién registró, quién validó, quién aprobó.</p>
+          <ul class="eco-features">
+            <li>Multi-sucursal con roles independientes</li>
+            <li>Trazabilidad de responsabilidades asignadas</li>
+            <li>Auditoría de acciones por usuario</li>
+          </ul>
+        </div>
+        <div class="eco-card eco-soon">
+          <div class="eco-card-top">
+            <span class="eco-icon" aria-hidden="true">⚙️</span>
+            <span class="eco-status-badge soon">Próximamente</span>
+          </div>
+          <h3>Ciclo de Vida de Instrumentos</h3>
+          <p>Gestión integral del ciclo de vida de cada analizador: desde su ingreso hasta su baja. Trazabilidad completa de calibraciones, incidencias y estado operativo en cualquier momento.</p>
+          <ul class="eco-features">
+            <li>Alta, seguimiento y baja del instrumento</li>
+            <li>Historial de calibraciones y verificaciones</li>
+            <li>Correlación instrumento ↔ desviación QC</li>
+          </ul>
+        </div>
+        <div class="eco-card eco-soon">
+          <div class="eco-card-top">
+            <span class="eco-icon" aria-hidden="true">🔧</span>
+            <span class="eco-status-badge soon">Próximamente</span>
+          </div>
+          <h3>Registro de Mantenciones</h3>
+          <p>Bitácora estructurada de mantenimientos preventivos y correctivos por equipo. El sistema correlaciona automáticamente una mantención pendiente o reciente con las desviaciones del control de calidad.</p>
+          <ul class="eco-features">
+            <li>Calendario de mantenimiento preventivo</li>
+            <li>Registro de técnico, fecha y tipo de intervención</li>
+            <li>Alerta automática de mantención vencida</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="eco-convergence">
+        <div class="eco-conv-streams" aria-hidden="true">
+          <span>📊 QC</span>
+          <span>🧪 Inventario</span>
+          <span>👥 Roles</span>
+          <span>⚙️ Equipos</span>
+          <span>🔧 Mantenciones</span>
+        </div>
+        <div class="eco-conv-center">
+          <div class="eco-conv-icon" aria-hidden="true">🔗</div>
+          <div class="eco-conv-body">
+            <strong>Análisis de causa raíz integrado</strong>
+            <p>Consensus QC cruza automáticamente los cinco flujos de datos: ¿Cambió el lote? ¿Hay una mantención pendiente o reciente? ¿Fue registrado por un analista sin capacitación reciente? ¿El instrumento tiene incidencias abiertas? Los datos hablan por sí solos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SEGURIDAD DEL PACIENTE
+  ════════════════════════════════════════════════════════ -->
+  <section class="section section-plan" id="seguridad-paciente">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-section">Seguridad clínica</div>
+        <h2>Seguridad del paciente antes de liberar un resultado</h2>
+        <p>
+          Cuando se detecta una desviación crítica, Consensus QC activa medidas protectoras
+          para contener el riesgo y respaldar la toma de decisiones clínicas con trazabilidad completa.
+        </p>
+      </div>
+
+      <div class="modules-grid">
+        <article class="module-card">
+          <span class="module-badge">PROT</span>
+          <h3>Medidas protectoras inmediatas</h3>
+          <p>Retención temporal de resultados bajo sospecha, bloqueo de validación automática y escalamiento al encargado de calidad para revisión prioritaria.</p>
+        </article>
+        <article class="module-card">
+          <span class="module-badge">ALRT</span>
+          <h3>Comunicación clínica dirigida</h3>
+          <p>Flujo documentado para aviso a médicos tratantes, notificación interna y seguimiento de pacientes potencialmente impactados por una desviación confirmada.</p>
+        </article>
+        <article class="module-card">
+          <span class="module-badge">TRACE</span>
+          <h3>Evidencia para auditoría y mejora</h3>
+          <p>Cada decisión queda enlazada al plan, al gráfico Levey-Jennings, al registro operativo y al análisis posterior para aprendizaje institucional.</p>
+        </article>
+      </div>
+
+      <div class="eco-convergence" style="margin-top: 26px;">
+        <div class="eco-conv-streams" aria-hidden="true">
+          <span>⚠️ Eventos adversos</span>
+          <span>🛰️ Tecnovigilancia</span>
+          <span>🏥 Red interlaboratorio</span>
+          <span>📊 Señales tempranas</span>
+        </div>
+        <div class="eco-conv-center">
+          <div class="eco-conv-icon" aria-hidden="true">🛡️</div>
+          <div class="eco-conv-body">
+            <strong>Vigilancia colaborativa entre laboratorios</strong>
+            <p>Los módulos en desarrollo de Eventos Adversos y Tecnovigilancia se conectarán entre laboratorios para levantar sospechas tempranas, detectar patrones repetitivos y acelerar acciones preventivas en red.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MÓDULOS
+  ════════════════════════════════════════════════════════ -->
+  <section class="section" id="modulos">
+    <div class="container">
+      <div class="section-header">
+        <h2>Módulos del sistema</h2>
+        <p>9 módulos activos hoy + 10 en desarrollo. Todos integrados en una sola plataforma en la nube.</p>
+      </div>
+
+      <p class="modules-group-label">Disponibles ahora</p>
+      <div class="modules-grid">
+        <article class="module-card">
+          <span class="module-badge">PLAN</span>
+          <h3>Planificación de Calidad</h3>
+          <p>Gestión integral del plan: versiones, objetivos, estrategias, árboles de decisión Westgard y acciones correctivas con responsable y estado de cierre.</p>
+        </article>
+        <article class="module-card">
+          <span class="module-badge">QC</span>
+          <h3>Visualizador QC</h3>
+          <p>Revisión gráfica Levey-Jennings con funcionalidades avanzadas, evaluación analítica y apoyo a validación de corridas con reglas Westgard aplicadas automáticamente.</p>
+        </article>
+        <article class="module-card">
+          <span class="module-badge">REG</span>
+          <h3>Registro de Resultados</h3>
+          <p>Ingreso diario de resultados de control interno por área, analizador, control, analito y nivel, con trazabilidad del operador.</p>
+        </article>
+        <article class="module-card">
+          <span class="module-badge">KPI</span>
+          <h3>Dashboard de Calidad</h3>
+          <p>Supervisión en tiempo real del plan de calidad, alertas Westgard, cumplimiento de objetivos y lotes próximos a vencer.</p>
+        </article>
+        <article class="module-card">
+          <span class="module-badge sigma-badge">σ</span>
+          <h3>Desempeño Analítico</h3>
+          <p>Análisis Six Sigma por analito: CV interno + sesgo EQA = error total vs. criterio de aceptabilidad CLIA / BV / RCPA.</p>
+        </article>
+        <article class="module-card">
+          <span class="module-badge">CEX</span>
+          <h3>Control Externo de Calidad</h3>
+          <p>Registro de encuestas externas, grupos par y comparación por Bias%, Z-score y CVR frente a laboratorios de referencia.</p>
+        </article>
+        <article class="module-card">
+          <span class="module-badge">VAL</span>
+          <h3>Verificación Analítica</h3>
+          <p>Comparación de analizadores, verificación de precisión EP-15 CLSI, N20 ampliado con múltiples pruebas de consistencia, linealidad y evaluación de método.</p>
+        </article>
+        <article class="module-card">
+          <span class="module-badge">RPT</span>
+          <h3>Reportes y Exportación</h3>
+          <p>Reportes imprimibles y exportables (PDF/Excel), distribución por lista de correos y reporte de imprecisión para informar al LIS rangos dinámicos según variabilidad real del laboratorio.</p>
+        </article>
+        <article class="module-card">
+          <span class="module-badge">ADM</span>
+          <h3>Administración</h3>
+          <p>Gestión de usuarios, analitos, analizadores, controles y configuración general del sistema multisucursal.</p>
+        </article>
+      </div>
+
+      <p class="modules-group-label modules-group-label--soon">En desarrollo</p>
+      <div class="modules-grid">
+        <article class="module-card module-card--roadmap">
+          <div class="module-roadmap-top">
+            <span class="module-badge module-badge--roadmap">INV</span>
+            <span class="module-roadmap-tag">Próximamente</span>
+          </div>
+          <h3>Inventario de Reactivos</h3>
+          <p>Trazabilidad de lotes, stock mínimo, vencimientos y correlación directa con desviaciones del control de calidad por lote activo en el analizador.</p>
+        </article>
+        <article class="module-card module-card--roadmap">
+          <div class="module-roadmap-top">
+            <span class="module-badge module-badge--roadmap">ROL</span>
+            <span class="module-roadmap-tag">Próximamente</span>
+          </div>
+          <h3>Gestión de Roles y Responsabilidades</h3>
+          <p>Control de acceso por sucursal, asignación de responsabilidades a profesionales y trazabilidad de quién ejecutó cada acción del plan de calidad.</p>
+        </article>
+        <article class="module-card module-card--roadmap">
+          <div class="module-roadmap-top">
+            <span class="module-badge module-badge--roadmap">EQP</span>
+            <span class="module-roadmap-tag">Próximamente</span>
+          </div>
+          <h3>Ciclo de Vida de Instrumentos</h3>
+          <p>Gestión integral del ciclo de vida de cada analizador: ingreso, calibraciones, incidencias, verificaciones y baja. Trazabilidad completa del estado operativo en cualquier momento.</p>
+        </article>
+        <article class="module-card module-card--roadmap">
+          <div class="module-roadmap-top">
+            <span class="module-badge module-badge--roadmap">MNT</span>
+            <span class="module-roadmap-tag">Próximamente</span>
+          </div>
+          <h3>Registro de Mantenciones</h3>
+          <p>Bitácora de mantenimientos preventivos y correctivos con calendario de alertas. Correlación automática de intervenciones técnicas con desviaciones del control de calidad.</p>
+        </article>
+        <article class="module-card module-card--roadmap">
+          <div class="module-roadmap-top">
+            <span class="module-badge module-badge--roadmap">URO</span>
+            <span class="module-roadmap-tag">Próximamente</span>
+          </div>
+          <h3>Registro de Uroanálisis</h3>
+          <p>Registro estructurado de tiras reactivas, sedimento urinario y hallazgos cualitativos con trazabilidad del observador y control de consistencia.</p>
+        </article>
+        <article class="module-card module-card--roadmap">
+          <div class="module-roadmap-top">
+            <span class="module-badge module-badge--roadmap">PAR</span>
+            <span class="module-roadmap-tag">Próximamente</span>
+          </div>
+          <h3>Registro de Parasitología</h3>
+          <p>Flujos para examen parasitológico seriado, validación por técnica y trazabilidad de observaciones microscópicas con soporte de revisión técnica.</p>
+        </article>
+        <article class="module-card module-card--roadmap">
+          <div class="module-roadmap-top">
+            <span class="module-badge module-badge--roadmap">MIC</span>
+            <span class="module-roadmap-tag">Próximamente</span>
+          </div>
+          <h3>Registro de Microbiología</h3>
+          <p>Control de siembras, lectura de cultivos, identificación y seguimiento de resultados microbiológicos con integración al plan de calidad.</p>
+        </article>
+        <article class="module-card module-card--roadmap">
+          <div class="module-roadmap-top">
+            <span class="module-badge module-badge--roadmap">SCQ</span>
+            <span class="module-roadmap-tag">Próximamente</span>
+          </div>
+          <h3>Técnicas Semicuantitativas y Cualitativas</h3>
+          <p>Plantillas de registro para técnicas no plenamente cuantitativas con criterios de interpretación, repetibilidad y validación estandarizada.</p>
+        </article>
+        <article class="module-card module-card--roadmap">
+          <div class="module-roadmap-top">
+            <span class="module-badge module-badge--roadmap">EAD</span>
+            <span class="module-roadmap-tag">Próximamente</span>
+          </div>
+          <h3>Eventos Adversos</h3>
+          <p>Registro, clasificación y gestión de eventos adversos asociados al proceso analítico con vínculo directo a acciones correctivas y medidas de contención.</p>
+        </article>
+        <article class="module-card module-card--roadmap">
+          <div class="module-roadmap-top">
+            <span class="module-badge module-badge--roadmap">TEC</span>
+            <span class="module-roadmap-tag">Próximamente</span>
+          </div>
+          <h3>Tecnovigilancia</h3>
+          <p>Monitoreo de señales de riesgo técnico y desempeño de equipamiento en red interlaboratorio para levantar sospechas tempranas y prevenir reincidencias.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       REPORTES INTELIGENTES
+  ════════════════════════════════════════════════════════ -->
+  <section class="section section-alt" id="reportes-inteligentes">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-section">Comunicación y trazabilidad</div>
+        <h2>Reportes imprimibles, compartibles y clínicamente accionables</h2>
+        <p>
+          El sistema no se limita a mostrar datos: transforma la calidad analítica en reportes claros,
+          distribuibles y útiles para la toma de decisiones dentro y fuera del laboratorio.
+        </p>
+      </div>
+
+      <div class="modules-grid">
+        <article class="module-card">
+          <span class="module-badge">PDF</span>
+          <h3>Reportes imprimibles con firma</h3>
+          <p>Genere reportes estandarizados del plan, QC y desempeño analítico listos para impresión, auditoría y presentación a dirección técnica.</p>
+        </article>
+        <article class="module-card">
+          <span class="module-badge">MAIL</span>
+          <h3>Envío a listas de correo</h3>
+          <p>Distribución automática o manual a listas de correos por perfil: encargado de calidad, jefatura técnica, dirección médica y equipos de turno.</p>
+        </article>
+        <article class="module-card">
+          <span class="module-badge">LIS</span>
+          <h3>Imprecisión y rango dinámico al LIS</h3>
+          <p>Incluye reporte de imprecisión del laboratorio para informar en el LIS no solo un valor estático, sino un rango de resultado acorde a la variabilidad observada.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SCREENSHOTS
+  ════════════════════════════════════════════════════════ -->
+  <section class="section section-alt" id="screenshots">
+    <div class="container">
+      <div class="section-header">
+        <h2>Interfaz diseñada para el trabajo diario</h2>
+        <p>Navegación lateral intuitiva, gráficas claras y flujos del plan de calidad siempre visibles</p>
+      </div>
+      <div class="screenshots-grid">
+        <figure class="screenshot-item">
+          <div class="screenshot-img" aria-label="Placeholder: Plan de Calidad – Objetivos y acciones">
+            <span class="ss-placeholder-icon" aria-hidden="true">🎯</span>
+            <span>Plan de Calidad<br>Objetivos y acciones correctivas</span>
+          </div>
+          <figcaption>Ciclo completo del plan de calidad con estados, responsables y fechas límite</figcaption>
+        </figure>
+        <figure class="screenshot-item">
+          <div class="screenshot-img" aria-label="Placeholder: Visualizador QC – Levey-Jennings">
+            <span class="ss-placeholder-icon" aria-hidden="true">📊</span>
+            <span>Visualizador QC<br>Levey-Jennings avanzado + Westgard</span>
+          </div>
+          <figcaption>Gráficas Levey-Jennings con funciones avanzadas, trazabilidad de eventos y reglas Westgard aplicadas automáticamente por analito</figcaption>
+        </figure>
+        <figure class="screenshot-item">
+          <div class="screenshot-img" aria-label="Placeholder: Dashboard de Calidad – KPIs del plan">
+            <span class="ss-placeholder-icon" aria-hidden="true">📈</span>
+            <span>Dashboard KPI<br>Cumplimiento del plan en tiempo real</span>
+          </div>
+          <figcaption>Supervisión centralizada del plan de calidad con alertas de vencimiento y métricas Sigma</figcaption>
+        </figure>
+      </div>
+      <p class="screenshots-note">
+        Las capturas de pantalla completas estarán disponibles próximamente.
+        <a href="#contacto">Contáctenos para una demostración en vivo.</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       PRECIOS
+  ════════════════════════════════════════════════════════ -->
+  <section class="section" id="precios">
+    <div class="container">
+      <div class="section-header">
+        <h2>Planes disponibles</h2>
+        <p>Sin costos ocultos. Los nuevos módulos en desarrollo (incluyendo clínicos cualitativos, EAD y tecnovigilancia) se incluyen en el plan Premium al lanzar.</p>
+      </div>
+      <div class="pricing-grid">
+
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3>Versión de prueba</h3>
+            <p class="price">Gratis</p>
+            <p class="price-desc">14 días · sin tarjeta</p>
+          </div>
+          <ul class="pricing-features">
+            <li class="ok">Todos los módulos habilitados</li>
+            <li class="ok">Plan de calidad completo en prueba</li>
+            <li class="ok">Sin límite de analitos en prueba</li>
+            <li class="ok">Datos conservados al activar licencia</li>
+            <li class="ok">Soporte por correo</li>
+            <li class="no">Sin actualizaciones post-prueba</li>
+          </ul>
+          <a href="https://github.com/descarga/consensus-qc/releases/latest/download/ConsensusQC_Prueba_Setup.exe"
+             class="btn-primary btn-download">
+            ⬇ Descargar ahora
+          </a>
+          <p class="pricing-note">
+            <a href="https://github.com/descarga/consensus-qc/releases/latest" target="_blank" rel="noopener">
+              Ver notas de la versión →
+            </a>
+          </p>
+        </div>
+
+        <div class="pricing-card pricing-featured">
+          <div class="pricing-badge">Más popular · MVP</div>
+          <div class="pricing-header">
+            <h3>Premium</h3>
+            <div class="price-block">
+              <span class="price-currency">USD</span>
+              <span class="price-amount">79</span>
+              <span class="price-period">/mes</span>
+            </div>
+            <p class="price-desc">por sucursal · sin permanencia · facturación mensual</p>
+          </div>
+          <ul class="pricing-features">
+            <li class="ok">Todos los 9 módulos activos incluidos</li>
+            <li class="ok">Plan de calidad completo con ciclo de mejora</li>
+            <li class="ok">Multi-usuario por sucursal</li>
+            <li class="ok">Actualizaciones continuas incluidas</li>
+            <li class="ok">Nuevos módulos INV, ROL, EQP, MNT, URO, PAR, MIC, SCQ, EAD y TEC al lanzar</li>
+            <li class="ok">Soporte técnico prioritario</li>
+            <li class="ok">Onboarding y capacitación incluida</li>
+            <li class="ok">Base de datos respaldada en la nube</li>
+          </ul>
+          <a href="#contacto" class="btn-primary">Solicitar licencia</a>
+          <p class="pricing-note">Precio de lanzamiento MVP. Cualquier ajuste se comunica con 60 días de anticipación.</p>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3>Red hospitalaria</h3>
+            <p class="price">Cotización</p>
+            <p class="price-desc">Múltiples sedes · volumen</p>
+          </div>
+          <ul class="pricing-features">
+            <li class="ok">Todo lo del plan Premium</li>
+            <li class="ok">Gestión de múltiples laboratorios</li>
+            <li class="ok">Peer-group interlaboratorio propio</li>
+            <li class="ok">Análisis comparativo entre sedes</li>
+            <li class="ok">Plan de calidad consolidado multi-sede</li>
+            <li class="ok">Roles diferenciados por sede y jerarquía</li>
+            <li class="ok">SLA de soporte dedicado</li>
+            <li class="ok">Implementación asistida on-site / remota</li>
+          </ul>
+          <a href="#contacto" class="btn-secondary">Solicitar cotización</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       REQUISITOS
+  ════════════════════════════════════════════════════════ -->
+  <section class="section section-alt" id="requisitos">
+    <div class="container">
+      <div class="section-header">
+        <h2>Requisitos del sistema</h2>
+        <p>Instalación simple en Windows, sin configuración de servidor local</p>
+      </div>
+      <div class="req-grid">
+        <div class="req-item">
+          <span class="req-icon" aria-hidden="true">🖥</span>
+          <div>
+            <strong>Sistema operativo</strong>
+            <span>Windows 10 / 11 (64 bits)</span>
+          </div>
+        </div>
+        <div class="req-item">
+          <span class="req-icon" aria-hidden="true">💾</span>
+          <div>
+            <strong>Memoria RAM</strong>
+            <span>4 GB mínimo — 8 GB recomendado</span>
+          </div>
+        </div>
+        <div class="req-item">
+          <span class="req-icon" aria-hidden="true">📁</span>
+          <div>
+            <strong>Espacio en disco</strong>
+            <span>500 MB libres</span>
+          </div>
+        </div>
+        <div class="req-item">
+          <span class="req-icon" aria-hidden="true">🌐</span>
+          <div>
+            <strong>Conexión a internet</strong>
+            <span>Requerida (base de datos en la nube)</span>
+          </div>
+        </div>
+        <div class="req-item">
+          <span class="req-icon" aria-hidden="true">🖱</span>
+          <div>
+            <strong>Resolución de pantalla</strong>
+            <span>1280 × 768 o superior</span>
+          </div>
+        </div>
+        <div class="req-item">
+          <span class="req-icon" aria-hidden="true">🔐</span>
+          <div>
+            <strong>Permisos de instalación</strong>
+            <span>Derechos de administrador en Windows</span>
+          </div>
+        </div>
+      </div>
+      <div class="req-note">
+        <strong>Sin instalación de base de datos local.</strong> La base de datos PostgreSQL
+        es administrada de forma centralizada y segura por el equipo de Consensus QC.
+        Su laboratorio solo necesita una conexión a internet estable.
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FAQ
+  ════════════════════════════════════════════════════════ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2>Preguntas frecuentes</h2>
+      </div>
+      <div class="faq-list" role="list">
+
+        <details class="faq-item">
+          <summary>¿Qué incluye exactamente el módulo Plan de Calidad?</summary>
+          <div class="faq-body">
+            <p>El módulo PLAN cubre el ciclo completo de gestión de calidad:</p>
+            <ul>
+              <li>Definición de objetivos de calidad por área y analito</li>
+              <li>Estrategias Westgard y umbrales Sigma configurables</li>
+              <li>Árboles de decisión QC: qué regla aplica ante cada desviación</li>
+              <li>Registro de acciones correctivas y protectoras con responsable y fecha</li>
+              <li>Historial de versiones del plan con control de cambios</li>
+              <li>Reportes PDF del ciclo de calidad con firma del responsable técnico</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Cuándo estarán disponibles los módulos en desarrollo?</summary>
+          <div class="faq-body">
+            <p>
+              Inventario, Roles, Ciclo de Vida de Instrumentos, Mantenciones, Uroanálisis,
+              Parasitología, Microbiología, técnicas semicuantitativas/cualitativas,
+              Eventos Adversos y Tecnovigilancia están en desarrollo activo y se lanzarán
+              de forma incremental durante 2026–2027.
+              Los clientes con plan Premium activo accederán a cada nuevo módulo
+              <strong>sin costo adicional</strong> en cuanto esté disponible.
+              <a href="#contacto">Inscríbase para recibir notificación de lanzamiento.</a>
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Cómo detecta el sistema la causa raíz de una desviación?</summary>
+          <div class="faq-body">
+            <p>
+              Actualmente puede correlacionar desviaciones con cambios registrados de lote de reactivo
+              y con el historial de analistas que operaron el equipo. Al integrarse los módulos
+              de Inventario, Equipamiento, Mantenciones, Eventos Adversos y Tecnovigilancia,
+              el sistema cruzará automáticamente:
+            </p>
+            <ul>
+              <li>Coincidencia de fecha de desviación con apertura de nuevo lote de reactivo</li>
+              <li>Estado de mantenimiento del analizador en el momento de la corrida</li>
+              <li>Analista asignado y su historial de validaciones recientes</li>
+              <li>Resultados de EQA del período para el mismo analito</li>
+              <li>Señales repetitivas de incidente técnico reportadas por otros laboratorios de la red</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Cómo protege Consensus QC la seguridad del paciente ante una desviación?</summary>
+          <div class="faq-body">
+            <p>El sistema aplica una respuesta escalonada orientada a contención temprana:</p>
+            <ul>
+              <li>Retención preventiva de resultados bajo sospecha hasta revisión</li>
+              <li>Escalamiento inmediato al encargado de calidad y responsables clínicos</li>
+              <li>Registro trazable de avisos a médicos y seguimiento de pacientes impactados</li>
+              <li>Vinculación obligatoria con acciones correctivas y análisis posterior</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Qué ventajas tienen los reportes para auditoría, equipos clínicos y LIS?</summary>
+          <div class="faq-body">
+            <p>Consensus QC entrega una capa de reporte diseñada para operación real:</p>
+            <ul>
+              <li>Reportes imprimibles con estructura técnica y firma del responsable</li>
+              <li>Envío a listas de correo por rol (calidad, jefatura, dirección, turno)</li>
+              <li>Reporte de imprecisión para sustentar variabilidad analítica del laboratorio</li>
+              <li>Soporte para informar al LIS rangos dinámicos en vez de un único valor estático, cuando la política del laboratorio lo define</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Cómo funciona la arquitectura multi-sucursal?</summary>
+          <div class="faq-body">
+            <p>
+              Cada sucursal tiene su propio espacio de datos completamente aislado.
+              Un supervisor con acceso multi-sucursal puede ver los KPIs consolidados
+              de todas las sedes desde un mismo dashboard, mientras que los analistas
+              solo ven los datos de su propia sucursal.
+              El plan de calidad puede gestionarse de forma independiente por sede
+              o de manera centralizada con supervisión desde la sede principal.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Windows muestra una advertencia "SmartScreen" al instalar</summary>
+          <div class="faq-body">
+            <p>
+              Es normal en software nuevo que aún no ha acumulado suficiente historial de descarga.
+              Para continuar: haga clic en <strong>"Más información"</strong> → luego en
+              <strong>"Ejecutar de todas formas"</strong>.
+            </p>
+            <p>
+              Puede verificar la autenticidad comparando el SHA-256 del instalador con el valor
+              publicado en la
+              <a href="https://github.com/descarga/consensus-qc/releases/latest" target="_blank" rel="noopener">
+                página de versiones en GitHub
+              </a>.
+              Ejecute en PowerShell:
+            </p>
+            <pre><code>Get-FileHash "ConsensusQC_Prueba_Setup.exe" -Algorithm SHA256</code></pre>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Mis datos quedan guardados al terminar la prueba?</summary>
+          <div class="faq-body">
+            <p>
+              Sí. Todos los datos ingresados durante los 14 días — incluyendo el plan
+              de calidad, analitos, controles y resultados — se conservan íntegramente.
+              Al activar una licencia Premium, la cuenta se convierte sin pérdida de ningún dato.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Qué normas internacionales soporta el sistema?</summary>
+          <div class="faq-body">
+            <p>El sistema implementa metodologías y criterios de las siguientes normas y fuentes:</p>
+            <ul>
+              <li>Reglas de Westgard (1₃s, 2₂s, R₄s, 4₁s, 10x)</li>
+              <li>CLSI EP15-A3 — Verificación de precisión e imprecisión</li>
+              <li>Análisis Six Sigma con criterios CLIA, BV y RCPA</li>
+              <li>Métricas de Desempeño Analítico: TEa, CV%, Bias%</li>
+              <li>Comparación interlaboratorio por Z-score y CVR</li>
+              <li>ISO 15189 — Gestión del plan de calidad del laboratorio clínico</li>
+            </ul>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       CONTACTO
+  ════════════════════════════════════════════════════════ -->
+  <section class="section section-dark" id="contacto">
+    <div class="container">
+      <div class="section-header light">
+        <h2>¿Listo para implementarlo en su laboratorio?</h2>
+        <p>Complete el formulario y le respondemos dentro de 24 horas hábiles.</p>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-info">
+          <div class="ci-item">
+            <span class="ci-icon" aria-hidden="true">🎯</span>
+            <div>
+              <strong>Plan de calidad desde el día 1</strong>
+              <span>El sistema viene con plantillas de objetivos y estrategias Westgard listas para usar.</span>
+            </div>
+          </div>
+          <div class="ci-item">
+            <span class="ci-icon" aria-hidden="true">🏥</span>
+            <div>
+              <strong>Redes hospitalarias multi-sede</strong>
+              <span>Plan de calidad consolidado con comparación de desempeño entre laboratorios.</span>
+            </div>
+          </div>
+          <div class="ci-item">
+            <span class="ci-icon" aria-hidden="true">🔄</span>
+            <div>
+              <strong>Nuevos módulos incluidos</strong>
+              <span>Incluye roadmap completo: inventario, roles, equipos, mantenciones, módulos cualitativos, eventos adversos y tecnovigilancia.</span>
+            </div>
+          </div>
+          <div class="ci-item">
+            <span class="ci-icon" aria-hidden="true">🎓</span>
+            <div>
+              <strong>Capacitación incluida</strong>
+              <span>Onboarding en el plan de calidad, configuración de reglas Westgard y acompañamiento inicial.</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form"
+              method="POST"
+              novalidate
+              data-hubspot-form
+              id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstname">Nombre *</label>
+              <input type="text" id="firstname" name="firstname" placeholder="Ana" required autocomplete="given-name">
+            </div>
+            <div class="form-group">
+              <label for="lastname">Apellido *</label>
+              <input type="text" id="lastname" name="lastname" placeholder="García" required autocomplete="family-name">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Correo electrónico *</label>
+              <input type="email" id="email" name="email" placeholder="correo@laboratorio.com" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="phone">Teléfono</label>
+              <input type="tel" id="phone" name="phone" placeholder="+56 9 1234 5678" autocomplete="tel">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="company">Laboratorio / Institución *</label>
+              <input type="text" id="company" name="company" placeholder="Nombre del laboratorio" required autocomplete="organization">
+            </div>
+            <div class="form-group">
+              <label for="jobtitle">Cargo / rol</label>
+              <input type="text" id="jobtitle" name="jobtitle" placeholder="Encargado de calidad, director técnico..." autocomplete="organization-title">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="country">País</label>
+            <input type="text" id="country" name="country" placeholder="Ej: Chile, Argentina, Perú..." autocomplete="country-name">
+          </div>
+          <div class="form-group">
+            <label for="interest_area">¿Qué le interesa?</label>
+            <select id="interest_area" name="interest_area">
+              <option value="">Seleccionar...</option>
+              <option value="prueba">Probar el software (14 días gratis)</option>
+              <option value="premium">Contratar plan Premium ($79/mes)</option>
+              <option value="red">Plan Red hospitalaria / multi-sede</option>
+              <option value="demo">Demo del Plan de Calidad en línea</option>
+              <option value="reportes">Reportes imprimibles y distribución por correo</option>
+              <option value="lis_rango">Reporte de imprecisión y rango dinámico para LIS</option>
+              <option value="inventario">Módulo Inventario (próximamente)</option>
+              <option value="roles">Módulo Roles y Responsabilidades (próximamente)</option>
+              <option value="equipos">Módulo Ciclo de Vida de Instrumentos (EQP)</option>
+              <option value="mantenciones">Módulo Registro de Mantenciones (MNT)</option>
+              <option value="uroanalisis">Módulo Registro de Uroanálisis (URO)</option>
+              <option value="parasitologia">Módulo Registro de Parasitología (PAR)</option>
+              <option value="microbiologia">Módulo Registro de Microbiología (MIC)</option>
+              <option value="semi_cuali">Módulo Técnicas Semicuantitativas/Cualitativas (SCQ)</option>
+              <option value="eventos_adversos">Módulo Eventos Adversos (EAD)</option>
+              <option value="tecnovigilancia">Módulo Tecnovigilancia (TEC)</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="4"
+              placeholder="Cuéntenos sobre su laboratorio: especialidad, número de analistas, analizadores principales, cantidad de sucursales..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit" id="btn-submit">
+            Enviar solicitud
+          </button>
+          <p class="form-success" id="form-success" aria-live="polite" hidden>
+            ✓ Mensaje enviado. Le responderemos pronto.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-name">Consensus QC</span>
+      </div>
+      <p class="footer-tagline">Plataforma Integral de Calidad para Laboratorio Clínico</p>
+      <nav class="footer-links" aria-label="Links del footer">
+        <a href="https://github.com/descarga/consensus-qc/releases" target="_blank" rel="noopener">
+          Historial de versiones
+        </a>
+        <a href="https://github.com/descarga/consensus-qc/releases/latest" target="_blank" rel="noopener">
+          Última versión
+        </a>
+        <a href="#plan-calidad">Plan de Calidad</a>
+        <a href="#seguridad-paciente">Seguridad del Paciente</a>
+        <a href="#reportes-inteligentes">Reportes</a>
+        <a href="#modulos">Módulos</a>
+        <a href="#precios">Planes</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="footer-download">
+        <a href="https://github.com/descarga/consensus-qc/releases/latest/download/ConsensusQC_Prueba_Setup.exe"
+           class="btn-footer-download btn-download">
+          ⬇ Descargar versión de prueba
+        </a>
+      </div>
+      <p class="footer-copy">
+        © 2026 Consensus QC. Todos los derechos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
+
