@@ -2,9 +2,9 @@
 
 Repositorio público que contiene:
 - **Sitio web** (GitHub Pages, carpeta `docs/`)
-- **Instaladores** distribuidos mediante GitHub Releases
+- **Instaladores** hospedados dentro de `docs/assets/downloads/` para descarga directa desde Pages
 
-**URL del sitio:** https://descarga.github.io/consensus-qc
+**URL del sitio:** https://xergio1625.github.io/consensus-qc-site/
 
 ---
 
@@ -36,7 +36,7 @@ En GitHub → **Settings → Pages**:
 ### Paso 1 — Generar el instalador
 Compilar con Inno Setup → obtener `ConsensusQC_Prueba_Setup.exe`
 
-> El nombre del archivo `.exe` debe mantenerse **exactamente igual** en cada versión para que la URL `releases/latest/download/` siempre funcione.
+> El nombre del archivo `.exe` debe mantenerse **exactamente igual** en cada versión para que el enlace de Pages siempre funcione.
 
 ### Paso 2 — Calcular el checksum SHA-256
 
@@ -54,17 +54,11 @@ O ejecutar el script incluido:
 .\scripts\generar_checksum.ps1 -Instalador "ConsensusQC_Prueba_Setup.exe"
 ```
 
-### Paso 3 — Crear el Release en GitHub
+### Paso 3 — Publicar los archivos en Pages
 
-1. Ir a **GitHub → Releases → Draft a new release**
-2. **Tag**: crear nuevo → `vX.X.X` (semver, ej: `v3.0.1`)
-3. **Title**: `Consensus QC vX.X.X`
-4. **Body**: copiar desde `.github/RELEASE_NOTES_TEMPLATE.md` y completar
-5. **Assets**: subir ambos archivos:
-   - `ConsensusQC_Prueba_Setup.exe`
-   - `ConsensusQC_Prueba_Setup.exe.sha256`
-6. ✅ Marcar como **"Set as the latest release"**
-7. **Publish release**
+1. Copiar `ConsensusQC_Prueba_Setup.exe` y `ConsensusQC_Prueba_Setup.exe.sha256` a `docs/assets/downloads/`
+2. Hacer commit y push al branch `main`
+3. Verificar que el sitio publicado responda con el archivo descargable
 
 ### Convención de versiones (semver)
 | Tipo de cambio | Ejemplo |
@@ -77,13 +71,13 @@ O ejecutar el script incluido:
 
 ## URL permanente de descarga
 
-Esta URL **nunca cambia** y siempre apunta al instalador de la última versión publicada:
+Esta URL **nunca cambia** y siempre apunta al instalador alojado en Pages:
 
 ```
-https://github.com/descarga/consensus-qc/releases/latest/download/ConsensusQC_Prueba_Setup.exe
+https://xergio1625.github.io/consensus-qc-site/assets/downloads/ConsensusQC_Prueba_Setup.exe
 ```
 
-El botón de descarga en `docs/index.html` ya usa esta URL.
+El botón de descarga en `docs/index.html` ya usa esta ruta relativa.
 
 ---
 
