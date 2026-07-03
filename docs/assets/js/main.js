@@ -108,6 +108,7 @@
         { name: 'company', value: obtenerValorCampo(formulario, '#company') },
         { name: 'jobtitle', value: obtenerValorCampo(formulario, '#jobtitle') },
         { name: 'country', value: obtenerValorCampo(formulario, '#country') },
+        { name: 'industry', value: 'Laboratorio Clínico' },
         { name: 'interest_area', value: obtenerValorCampo(formulario, '#interest_area') },
         { name: 'message', value: obtenerValorCampo(formulario, '#message') }
       ],
