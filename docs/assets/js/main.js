@@ -137,66 +137,31 @@
     });
   }
 
-  var FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/xergio.1625@gmail.com';
-
-  function construirPayloadFormulario(formulario) {
-    return {
-      nombre:        obtenerValorCampo(formulario, '#firstname') + ' ' + obtenerValorCampo(formulario, '#lastname'),
-      email:         obtenerValorCampo(formulario, '#email'),
-      telefono:      obtenerValorCampo(formulario, '#phone'),
-      laboratorio:   obtenerValorCampo(formulario, '#company'),
-      cargo:         obtenerValorCampo(formulario, '#jobtitle'),
-      pais:          obtenerValorCampo(formulario, '#country'),
-      interes:       obtenerValorCampo(formulario, '#interest_area'),
-      mensaje:       obtenerValorCampo(formulario, '#message'),
-      _subject:      'Nuevo contacto desde Consensus QC Landing',
-      _captcha:      'false'
-    };
-  }
-
   if (form) {
     form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
+      // Solo validar; dejar que el navegador envíe el formulario a FormSubmit
       if (!form.checkValidity()) {
+        e.preventDefault();
         form.reportValidity();
         return;
       }
-
       btnSend.disabled = true;
       btnSend.textContent = 'Enviando…';
-
-      fetch(FORMSUBMIT_ENDPOINT, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(construirPayloadFormulario(form))
-      })
-        .then(function (res) {
-          if (res.ok) {
-            form.reset();
-            if (success) {
-              success.hidden = false;
-              success.textContent = '✓ Mensaje enviado. Le responderemos pronto.';
-            }
-            btnSend.textContent = '✓ Enviado';
-          } else {
-            return res.json().then(function (json) {
-              throw new Error(json.message || 'Error al enviar');
-            });
-          }
-        })
-        .catch(function () {
-          btnSend.disabled = false;
-          btnSend.textContent = 'Enviar solicitud';
-          if (success) {
-            success.hidden = false;
-            success.textContent = 'No fue posible enviar el mensaje. Intente nuevamente.';
-          }
-        });
     });
+  }
+
+  /* ── MENSAJE DE ÉXITO AL VOLVER DE FORMSUBMIT ── */
+  if (window.location.search.indexOf('enviado=1') !== -1) {
+    var seccionContacto = document.getElementById('contacto');
+    if (seccionContacto) {
+      seccionContacto.scrollIntoView({ behavior: 'smooth' });
+    }
+    if (success) {
+      success.hidden = false;
+      success.textContent = '✓ Mensaje enviado correctamente. Le responderemos pronto.';
+    }
+    // Limpiar el parámetro de la URL sin recargar
+    window.history.replaceState({}, '', window.location.pathname + window.location.hash);
   }
 
   /* ── RESALTADO DE NAV ACTIVO AL HACER SCROLL ──── */
