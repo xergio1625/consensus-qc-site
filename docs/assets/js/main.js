@@ -10,8 +10,8 @@
   'use strict';
 
   var HUBSPOT_CONFIG = {
-    portalId: 'XXXXXXXX',
-    formGuid: 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX'
+    portalId: '49682748',
+    formGuid: '94ca0a2f-e66e-4197-ab12-696e0bff4e5b'
   };
 
   function esValorHubspotConfigVacio(valor) {
@@ -139,14 +139,39 @@
 
   if (form) {
     form.addEventListener('submit', function (e) {
-      // Solo validar; dejar que el navegador envíe el formulario a FormSubmit
+      e.preventDefault();
+
       if (!form.checkValidity()) {
-        e.preventDefault();
         form.reportValidity();
         return;
       }
+
       btnSend.disabled = true;
       btnSend.textContent = 'Enviando…';
+
+      enviarAHubSpot(form)
+        .then(function (res) {
+          if (res.ok) {
+            form.reset();
+            if (success) {
+              success.hidden = false;
+              success.textContent = '✓ Mensaje enviado. Le responderemos pronto.';
+            }
+            btnSend.textContent = '✓ Enviado';
+          } else {
+            return res.json().then(function (json) {
+              throw new Error(json.message || json.error || 'Error al enviar');
+            });
+          }
+        })
+        .catch(function () {
+          btnSend.disabled = false;
+          btnSend.textContent = 'Enviar solicitud';
+          if (success) {
+            success.hidden = false;
+            success.textContent = 'No fue posible enviar el mensaje. Intente nuevamente.';
+          }
+        });
     });
   }
 
@@ -160,7 +185,6 @@
       success.hidden = false;
       success.textContent = '✓ Mensaje enviado correctamente. Le responderemos pronto.';
     }
-    // Limpiar el parámetro de la URL sin recargar
     window.history.replaceState({}, '', window.location.pathname + window.location.hash);
   }
 
