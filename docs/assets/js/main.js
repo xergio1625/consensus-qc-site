@@ -72,19 +72,19 @@
     });
   }
 
-  /* ── FEEDBACK EN BOTONES DE DESCARGA ─────────── */
+  /* ── BOTONES DE DESCARGA — NO DISPONIBLE ───────── */
   document.querySelectorAll('.btn-download').forEach(function (btn) {
-    btn.addEventListener('click', function () {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
       var original = btn.textContent;
-      btn.textContent = '⏳ Iniciando descarga…';
+      btn.textContent = '🚫 No disponible por el momento';
       btn.style.pointerEvents = 'none';
+      btn.style.opacity = '0.75';
       setTimeout(function () {
-        btn.textContent = '✓ Descarga iniciada';
-        setTimeout(function () {
-          btn.textContent = original;
-          btn.style.pointerEvents = '';
-        }, 3500);
-      }, 1000);
+        btn.textContent = original;
+        btn.style.pointerEvents = '';
+        btn.style.opacity = '';
+      }, 3000);
     });
   });
 
@@ -137,51 +137,63 @@
     });
   }
 
+  var FORMSPREE_ENDPOINT = 'https://formspree.io/xergio.1625@gmail.com';
+
+  function construirPayloadFormspree(formulario) {
+    return {
+      firstname:     obtenerValorCampo(formulario, '#firstname'),
+      lastname:      obtenerValorCampo(formulario, '#lastname'),
+      email:         obtenerValorCampo(formulario, '#email'),
+      phone:         obtenerValorCampo(formulario, '#phone'),
+      company:       obtenerValorCampo(formulario, '#company'),
+      jobtitle:      obtenerValorCampo(formulario, '#jobtitle'),
+      country:       obtenerValorCampo(formulario, '#country'),
+      interest_area: obtenerValorCampo(formulario, '#interest_area'),
+      message:       obtenerValorCampo(formulario, '#message'),
+      _subject:      'Nuevo contacto desde Consensus QC Landing'
+    };
+  }
+
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      // Validación mínima HTML5
       if (!form.checkValidity()) {
         form.reportValidity();
         return;
       }
 
-      // Desactivar botón mientras se envía
       btnSend.disabled = true;
       btnSend.textContent = 'Enviando…';
 
-      if (!hubspotEstaConfigurado()) {
-        btnSend.disabled = false;
-        btnSend.textContent = 'Enviar solicitud';
-        if (success) {
-          success.hidden = false;
-          success.textContent = 'HubSpot no está configurado aún. Defina portalId y formGuid para activar el envío al CRM.';
-        }
-        return;
-      }
-
-      enviarAHubSpot(form)
+      fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(construirPayloadFormspree(form))
+      })
         .then(function (res) {
           if (res.ok) {
             form.reset();
             if (success) {
               success.hidden = false;
-              success.textContent = '✓ Lead enviado a HubSpot CRM. Le responderemos pronto.';
+              success.textContent = '✓ Mensaje enviado. Le responderemos pronto.';
             }
             btnSend.textContent = '✓ Enviado';
           } else {
             return res.json().then(function (json) {
-              throw new Error(json.message || json.error || 'Error al enviar a HubSpot');
+              throw new Error(json.error || 'Error al enviar');
             });
           }
         })
-        .catch(function (err) {
+        .catch(function () {
           btnSend.disabled = false;
           btnSend.textContent = 'Enviar solicitud';
           if (success) {
             success.hidden = false;
-            success.textContent = 'No fue posible enviar a HubSpot CRM en este momento.';
+            success.textContent = 'No fue posible enviar el mensaje. Intente nuevamente.';
           }
         });
     });
