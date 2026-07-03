@@ -137,20 +137,20 @@
     });
   }
 
-  var FORMSPREE_ENDPOINT = 'https://formspree.io/xergio.1625@gmail.com';
+  var FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/xergio.1625@gmail.com';
 
-  function construirPayloadFormspree(formulario) {
+  function construirPayloadFormulario(formulario) {
     return {
-      firstname:     obtenerValorCampo(formulario, '#firstname'),
-      lastname:      obtenerValorCampo(formulario, '#lastname'),
+      nombre:        obtenerValorCampo(formulario, '#firstname') + ' ' + obtenerValorCampo(formulario, '#lastname'),
       email:         obtenerValorCampo(formulario, '#email'),
-      phone:         obtenerValorCampo(formulario, '#phone'),
-      company:       obtenerValorCampo(formulario, '#company'),
-      jobtitle:      obtenerValorCampo(formulario, '#jobtitle'),
-      country:       obtenerValorCampo(formulario, '#country'),
-      interest_area: obtenerValorCampo(formulario, '#interest_area'),
-      message:       obtenerValorCampo(formulario, '#message'),
-      _subject:      'Nuevo contacto desde Consensus QC Landing'
+      telefono:      obtenerValorCampo(formulario, '#phone'),
+      laboratorio:   obtenerValorCampo(formulario, '#company'),
+      cargo:         obtenerValorCampo(formulario, '#jobtitle'),
+      pais:          obtenerValorCampo(formulario, '#country'),
+      interes:       obtenerValorCampo(formulario, '#interest_area'),
+      mensaje:       obtenerValorCampo(formulario, '#message'),
+      _subject:      'Nuevo contacto desde Consensus QC Landing',
+      _captcha:      'false'
     };
   }
 
@@ -166,13 +166,13 @@
       btnSend.disabled = true;
       btnSend.textContent = 'Enviando…';
 
-      fetch(FORMSPREE_ENDPOINT, {
+      fetch(FORMSUBMIT_ENDPOINT, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
-        body: JSON.stringify(construirPayloadFormspree(form))
+        body: JSON.stringify(construirPayloadFormulario(form))
       })
         .then(function (res) {
           if (res.ok) {
@@ -184,7 +184,7 @@
             btnSend.textContent = '✓ Enviado';
           } else {
             return res.json().then(function (json) {
-              throw new Error(json.error || 'Error al enviar');
+              throw new Error(json.message || 'Error al enviar');
             });
           }
         })
