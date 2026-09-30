@@ -3,7 +3,8 @@
 > **Sitio trasladado (octubre de 2026).** Todas las páginas redirigen a
 > https://xergio1625.github.io/consensuslab/consensus-qc/ (docs/index.html y docs/404.html).
 > La versión anterior del sitio está en el historial de git (commit 819f3b8). Los archivos de
-> docs/assets/ se conservan: los enlaces directos a ellos siguen funcionando.
+> docs/assets/ se conservan, salvo el instalador: desde octubre de 2026 la versión oficial de Consensus QC es la web
+> y el programa de escritorio ya no se distribuye.
 
 Repositorio público que contiene:
 - **Sitio web** (GitHub Pages, carpeta `docs/`)
